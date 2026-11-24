@@ -1,0 +1,26 @@
+info:
+  name: Cadastrar Medico
+  type: http
+  seq: 2
+  tags:
+    - medico-controller
+
+http:
+  method: POST
+  url: "{{baseUrl}}/medicos"
+  body:
+    type: json
+    data: |-
+      {
+        "crm": "12347/RS",
+        "nome": "{{$randomFullName}}",
+        "especialidade": "Cardiologia"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

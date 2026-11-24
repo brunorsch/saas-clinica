@@ -1,0 +1,28 @@
+info:
+  name: Atualizar Paciente
+  type: http
+  seq: 2
+  tags:
+    - paciente-controller
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/pacientes/:id"
+  params:
+    - name: id
+      value: "1"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Ricardo Oliveira"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

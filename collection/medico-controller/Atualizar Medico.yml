@@ -1,0 +1,26 @@
+info:
+  name: Atualizar Medico
+  type: http
+  seq: 1
+  tags:
+    - medico-controller
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/medicos"
+  body:
+    type: json
+    data: |-
+      {
+        "id": 1,
+        "crm": "54321/SC",
+        "especialidade": "Clínica Médica"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

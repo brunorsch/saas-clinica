@@ -1,0 +1,22 @@
+info:
+  name: Excluir Paciente
+  type: http
+  seq: 3
+  tags:
+    - paciente-controller
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/pacientes/:id"
+  params:
+    - name: id
+      value: "2"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

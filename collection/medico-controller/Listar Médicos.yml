@@ -1,0 +1,18 @@
+info:
+  name: Listar Médicos
+  type: http
+  seq: 6
+  tags:
+    - medico-controller
+
+http:
+  method: GET
+  url: "{{baseUrl}}/medicos"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

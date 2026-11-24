@@ -1,0 +1,22 @@
+info:
+  name: Buscar Medico por CRM
+  type: http
+  seq: 5
+  tags:
+    - medico-controller
+
+http:
+  method: GET
+  url: "{{baseUrl}}/medicos/crm/:crm"
+  params:
+    - name: crm
+      value: 12346-RS
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

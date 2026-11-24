@@ -1,0 +1,22 @@
+info:
+  name: Buscar Paciente por ID
+  type: http
+  seq: 1
+  tags:
+    - paciente-controller
+
+http:
+  method: GET
+  url: "{{baseUrl}}/pacientes/:id"
+  params:
+    - name: id
+      value: "1"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
